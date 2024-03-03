@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=mysql+pymysql://ShinYamamoto:@9019192865@db/yourdbname
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0.3
+    environment:
+      - MYSQL_ROOT_PASSWORD=@9019192865
+      - MYSQL_DATABASE=app_physical_beauty
+      - MYSQL_USER=ShinYamamoto
+      - MYSQL_PASSWORD=@9019192865
+
+
+# 実行コマンド
+# docker-compose up --build

@@ -49,3 +49,39 @@ app_physical_beauty/
 |-- config.py　アプリケーションの設定  
 |-- run.py　アプリケーションを実行するためのエントリポイント  
 
+## 環境構築
+pythinをインストール
+version 3.7.6
+
+プロジェクトのディレクトリに移動し、仮想環境を作成
+python -m venv venv
+
+仮想環境をアクティベート
+source venv/bin/activate
+
+Flaskのインストール
+pip install Flask
+
+MySQL用のFlask拡張モジュールのインストール
+pip install flask-mysql
+
+LLMとの通信に使用するライブラリのインストール
+pip install requests
+
+MySQLドライバのインストール
+pip install pymysql
+
+MySQLのインストール
+Server version: 8.3.0 MySQL
+ユーザー名　ShinYamamoto
+パスワード　@9019192865
+
+
+
+pip install Flask-SQLAlchemy
+pip install Flask-Migrate
+pip install --upgrade Flask Flask-Migrate
+flask db init
+flask db upgrade
+python -m pip install --upgrade pip
+pip install cryptography

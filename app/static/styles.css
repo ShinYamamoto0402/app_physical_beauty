@@ -1,0 +1,27 @@
+/* styles.css */
+body {
+    background-color: #ffe6f2; /* ピンク系の背景色 */
+}
+
+.container {
+    background-color: #ffffff; /* 白色のコンテナ */
+    box-shadow: 0px 0px 10px 0px #000000;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.btn-pink {
+    background-color: #e83e8c; /* ピンクのボタン */
+    border-color: #e83e8c; /* ピンクのボーダー */
+    color: #fff; /* 白色のテキスト */
+}
+
+footer {
+    background-color: #e83e8c; /* ピンク系のフッター背景色 */
+    color: #fff; /* 白色のテキスト */
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
