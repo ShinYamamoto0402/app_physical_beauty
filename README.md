@@ -37,17 +37,15 @@ HTTPSを使用して通信を暗号化。
 入力データの検証とエスケープを行い、セキュリティ対策を施す。
 
 ## ディレクトリ構成
-my_project/
-|-- app/
-|   |-- static/          静的ファイル (CSS, JavaScript, 画像)
-|   |-- templates/       テンプレートファイル (HTML)
-|   |-- __init__.py      アプリケーションの初期化
-|   |-- routes.py        ルートやビューロジック
-|   |-- models.py        データモデル
-|-- venv/                仮想環境
-|-- requirements.txt     依存ライブラリ
-|-- config.py            アプリケーションの設定
-|-- run.py               アプリケーションを実行するためのエントリポイント
-
-
+app_physical_beauty/  
+|-- app/  
+|　　|-- static/　静的ファイル (CSS, JavaScript, 画像)  
+|　　|-- templates/　テンプレートファイル (HTML)  
+|　　|-- __init__.py　アプリケーションの初期化  
+|　　|-- routes.py　ルートやビューロジック  
+|　　|-- models.py　データモデル  
+|-- venv/　仮想環境  
+|-- requirements.txt　依存ライブラリ  
+|-- config.py　アプリケーションの設定  
+|-- run.py　アプリケーションを実行するためのエントリポイント  
 
