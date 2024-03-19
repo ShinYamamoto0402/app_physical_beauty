@@ -1,25 +1,30 @@
-// search.js
-function searchDish() {
-    var dishName = document.getElementById('dishInput').value;
-    // 仮の非同期処理（ダミーのサーバーレスポンス）
-    performDummyAsyncOperation(dishName);
-}
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("searchButton").addEventListener("click", function () {
+        var dishInputValue = document.getElementById("dishInput").value;
+        var error = document.getElementById("error");
+        var exceptionError = document.getElementById("exceptionError");
 
-function searchIngredient() {
-    var ingredientName = document.getElementById('ingredientInput').value;
-    // 仮の非同期処理（ダミーのサーバーレスポンス）
-    performDummyAsyncOperation(ingredientName);
-}
+        if (dishInputValue.trim() === "") {
+            error.innerText = "料理名または食材名を入力してください。";
+            exceptionError.innerText = "";
+            return;
+        }
 
-// main.js
-// ... その他の関数や変数の定義
+        error.innerText = "";
 
-function performDummyAsyncOperation(name) {
-    // 仮の非同期処理（ダミーのサーバーレスポンス）
-    setTimeout(function () {
-        var result = formatResult(name);
-        displayResult(result);
-    }, 1000); // 1秒後に処理が完了したと仮定
-}
+        var requestData = "・日本語でレスポンスをしてください。\n・" + dishInputValue + " 100gあたりのカロリーとたんぱく質量を教えてください。小数点第一位までお願いします。\n・" + dishInputValue + " は料理名または食材名でしょうか？もし違うのであれば下記テンプレートを無視して「exceptionError」と文字列をだけを返して処理を中断してください（それ以外の文言は一切付け加えないこと）。\n・下記テンプレートに当てはめてjson形式でレスポンスをしてください。\n{\n  \"" + dishInputValue + "\": {\n    \"カロリー\": \"kal\",\n    \"たんぱく質\": \"g\"\n  }\n}";
 
-// ... その他の関数や変数の定義
+        // GPT3.5からのレスポンス結果
+        var result = "exceptionError";
+
+        if (result === "exceptionError") {
+            exceptionError.innerText = "料理名または食材名が間違っています。";
+            return;
+        }
+    });
+
+    document.getElementById("dishInput").addEventListener("click", function () {
+        document.getElementById("error").innerText = "";
+        document.getElementById("exceptionError").innerText = "";
+    });
+});
